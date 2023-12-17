@@ -1,0 +1,6 @@
+= Operating systems exam preparation =
+
+== Description ==
+
+This project is my preparation for operating systems exam.
+Project includes: working with processes and threads.
