@@ -18,7 +18,7 @@ add_executable(task-3-messenger-1-1 task-3-messenger/first-messenger.cpp
 
 add_executable(task-3-messenger-1-2 task-3-messenger/second-messenger.cpp)
 
-add_executable(task-3-messenger-2 task-3-messenger/single-messanger.cpp)
+add_executable(task-3-messenger-2 task-3-messenger/single-messenger.cpp)
 
 add_executable(task-4-semaphores-philosophers task-4-semaphores-philosophers/philosophers.cpp
         task-4-semaphores-philosophers/utils.h
