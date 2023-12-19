@@ -11,13 +11,6 @@
 #include <sys/msg.h>
 #include <sys/sem.h>
 #include <sys/shm.h>
-#define INDEX 26129
-
-
-struct Philosopher{
-    int id;
-    int state;
-};
-
+#define SHM_SIZE 128
 
 #endif //OS_EXAM_PREP_UTILS_H

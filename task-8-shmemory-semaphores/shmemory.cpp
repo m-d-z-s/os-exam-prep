@@ -4,7 +4,7 @@
 #define SHM_SIZE 128
 
 void lowerSemaphore(int semaphore) {
-    struct sembuf operation;
+    struct sembuf operation{};
 
     operation.sem_num = 0;
     operation.sem_op = (-1);
@@ -14,7 +14,7 @@ void lowerSemaphore(int semaphore) {
 }
 
 void raiseSemaphore(int semaphore) {
-    struct sembuf operation;
+    struct sembuf operation{};
 
     operation.sem_num = 0;
     operation.sem_op = 1;
@@ -26,15 +26,14 @@ void raiseSemaphore(int semaphore) {
 int main() {
     int shmemoryDesriptor = shmget(123456, SHM_SIZE, IPC_CREAT | 0666);
 
-
     int *array = (int *) shmat(shmemoryDesriptor, NULL, 0);
     array[0] = 0;
     for (int i = 1; i < SHM_SIZE; i++) {
         array[i] = i;
     }
 
-    int pSemaphore = semget(2222, 1, IPC_CREAT | 0666); // p active
-    int cSemaphore = semget(2223, 1, IPC_CREAT | 0666); // c active
+    int pSemaphore = semget(2222, 1, IPC_CREAT | 0666);
+    int cSemaphore = semget(2223, 1, IPC_CREAT | 0666);
     semctl(pSemaphore, 0, SETVAL, 1);
     semctl(cSemaphore, 0, SETVAL, 0);
 
