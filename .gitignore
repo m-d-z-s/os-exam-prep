@@ -2,3 +2,10 @@
 cmake-build-debug
 *.out
 .vscode
+bubble.txt
+shell.txt
+qs.txt
+init.txt
+pth_bubble.txt
+pth_shell.txt
+pth_qs.txt
