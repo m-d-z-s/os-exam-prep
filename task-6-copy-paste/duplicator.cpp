@@ -17,9 +17,6 @@ void copyPaste(char *fileFrom, char *fileTo){
 
     }
 
-
-    
-    
 }
 
 int main(){

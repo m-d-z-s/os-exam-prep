@@ -9,6 +9,7 @@
 #include <fstream>
 #include <random>
 #include <sys/msg.h>
+#include <string.h>
 
 struct Message {
     long key;
